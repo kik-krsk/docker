@@ -1,0 +1,19 @@
+version: "3"
+services:
+  php56:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    container_name: php-56
+    ports:
+      - "127.0.0.1:9156:9000"
+    networks:
+      - internal
+    restart: always
+    volumes:
+      - /var/www/:/var/www/
+networks:
+  internal:
+    driver: bridge
