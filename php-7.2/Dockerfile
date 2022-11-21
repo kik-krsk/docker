@@ -26,6 +26,8 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     libmagickwand-dev \
     libmagickcore-dev \
+    libsnmp-dev \
+    && docker-php-ext-install snmp \
     && pecl install mcrypt-1.0.3 \
     && docker-php-ext-enable mcrypt \
     && pecl install redis \

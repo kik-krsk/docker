@@ -1,4 +1,13 @@
 Образы докер с xdebug, oci8 и другими расширениям
+После изменения образа
+
+```console
+cd php-7.2/
+docker-compose build
+docker-compose down
+docker-compose up -d
+```
+
 Заупуск
 
 ```console
